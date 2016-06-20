@@ -1,0 +1,13 @@
+[template]
+prefix = "/cfcontroller"
+src = "nginx.tmpl"
+dest = "/etc/nginx/conf.d/cfcontroller.conf"
+owner = "root"
+mode = "0644"
+keys = [
+  "/location",
+]
+check_cmd = "/usr/sbin/nginx -t"
+reload_cmd = "/usr/sbin/service nginx reload"	
+
+

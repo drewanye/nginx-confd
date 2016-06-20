@@ -1,0 +1,10 @@
+nginx-confd:
+ build: /home/ubuntu/nginx-confd
+ #image: daocloud.io/nginx-confd:latest
+ ports:
+  - "80:80"
+ restart: always
+ environment:
+  EtcdNode: "http://192.168.1.37:4001"
+  AppDomain: "test.daoofficeapp.io"
+  interval: "5"
